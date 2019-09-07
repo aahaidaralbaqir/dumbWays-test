@@ -1,0 +1,1 @@
+SELECT `categories`.`name`, `product`.`name` FROM `categories` LEFT JOIN `product` ON `product`.`category_id` = `categories`.`id`
