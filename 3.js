@@ -1,3 +1,4 @@
+/* YANG INI BELUM SELESAI */
 const drawImage = (num) => {
    if(num % 2 !== 0){
       let output =[];
