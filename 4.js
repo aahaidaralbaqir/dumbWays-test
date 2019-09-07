@@ -1,16 +1,16 @@
-function hitungKembalian(uangTerpakai,uangBayar){
-   const stokKembalian = [500,1000,2000,5000,10000,20000,50000];
-   var kembalian = uangBayar - uangTerpakai;
-   let len = stokKembalian.length;
-   let jumlah = 0;
-   let ttt = [];
-   for(let i = 0; i < len; i++ ) {
-     if( kembalian -= stokKembalian[i] !== 0 ) {
-         ttt.push(stokKembalian[i]);
-     }else{
-        return false;
-     }
-   }
-   console.log(ttt);
+
+
+const hitungKembalian = (total_belanja,uang) => {
+   let kembali = uang - total_belanja;
+
+   let duaPuluhRibu = Math.floor(kembali / 20000);
+   let sisa = kembali % 20000;
+   let sepuluhRibu = Math.round(sisa / 10000);
+   sisa = sisa % 10000;
+   let duaRibu = Math.round(sisa / 2000);
+   sisa = sisa % 2000;
+   let limaRatus = Math.round(sisa / 500);
+   console.log(` \n ${duaPuluhRibu} x 20000 \n ${sepuluhRibu} x 10000 \n ${duaRibu} x 2000 \n ${limaRatus} x 500 \n  `);
 }
-hitungKembalian(15500,50000);
+
+hitungKembalian(15500, 50000);
